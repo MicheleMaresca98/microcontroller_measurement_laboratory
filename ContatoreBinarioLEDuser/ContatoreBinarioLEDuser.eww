@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspace>
+    <project>
+        <path>$WS_DIR$\ContatoreBinarioLEDuser.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\..\..\..\..\..\Desktop\Esame\Esame.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\..\..\SensoreTemperatura.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\..\SinusoideValoreEfficaceDACADCDMAmezzoTrasferimento\SinusoideValoreEfficaceDACADCDMAmezzoTrasferimento.ewp</path>
+    </project>
+    <batchBuild />
+</workspace>
