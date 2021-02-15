@@ -1,0 +1,331 @@
+###############################################################################
+#
+# IAR ELF Linker V8.40.2.214/W32 for ARM                  05/Feb/2020  11:59:22
+# Copyright 2007-2019 IAR Systems AB.
+#
+#    Output file  =
+#        C:\Users\hp\Dropbox\Laboratorio di
+#        Misure\WorkspaceLMM\Esami\Rampa\Debug\Exe\Rampa.out
+#    Map file     =
+#        C:\Users\hp\Dropbox\Laboratorio di
+#        Misure\WorkspaceLMM\Esami\Rampa\Debug\List\Rampa.map
+#    Command line =
+#        -f C:\Users\hp\AppData\Local\Temp\EWC865.tmp
+#        ("C:\Users\hp\Dropbox\Laboratorio di
+#        Misure\WorkspaceLMM\Esami\Rampa\Debug\Obj\main.o"
+#        "C:\Users\hp\Dropbox\Laboratorio di
+#        Misure\WorkspaceLMM\Esami\Rampa\Debug\Obj\startup_stm32f30x.o"
+#        "C:\Users\hp\Dropbox\Laboratorio di
+#        Misure\WorkspaceLMM\Esami\Rampa\Debug\Obj\system_stm32f30x.o"
+#        --no_out_extension -o "C:\Users\hp\Dropbox\Laboratorio di
+#        Misure\WorkspaceLMM\Esami\Rampa\Debug\Exe\Rampa.out" --redirect
+#        _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb --map
+#        "C:\Users\hp\Dropbox\Laboratorio di
+#        Misure\WorkspaceLMM\Esami\Rampa\Debug\List\Rampa.map" --config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.3\arm\config\linker\ST\stm32f303xC.icf" --semihosting --entry
+#        __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x803'ffff] { ro };
+define block CSTACK with size = 8K, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'9fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+No sections matched the following patterns:
+
+  section .ccmram  in "P3"
+
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                       0x188
+  .intvec            ro code   0x800'0000   0x188  startup_stm32f30x.o [1]
+                             - 0x800'0188   0x188
+
+"P1":                                       0xa40
+  .text              ro code   0x800'0188   0x26c  main.o [1]
+  .text              ro code   0x800'03f4    0x24  S32ToFlt.o [3]
+  .text              ro code   0x800'0418    0xd8  FltMul.o [3]
+  .text              ro code   0x800'04f0    0xe2  FltAdd.o [3]
+  .text              ro code   0x800'05d2    0x3a  zero_init3.o [4]
+  .text              ro code   0x800'060c    0x48  FltToDbl.o [3]
+  .text              ro code   0x800'0654   0x1a2  DblMul.o [3]
+  .text              ro code   0x800'07f6    0x2e  copy_init3.o [4]
+  .text              ro code   0x800'0824    0x3a  DblToS32.o [3]
+  .text              ro code   0x800'0860    0x74  FltSub.o [3]
+  .text              ro code   0x800'08d4   0x118  system_stm32f30x.o [1]
+  .text              ro code   0x800'09ec    0x28  data_init.o [4]
+  .iar.init_table    const     0x800'0a14    0x24  - Linker created -
+  .text              ro code   0x800'0a38    0x1e  cmain.o [4]
+  .text              ro code   0x800'0a56     0x4  low_level_init.o [2]
+  .text              ro code   0x800'0a5a     0x4  exit.o [2]
+  .text              ro code   0x800'0a60     0xa  cexit.o [4]
+  .text              ro code   0x800'0a6c    0x14  exit.o [5]
+  .text              ro code   0x800'0a80    0x10  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0a90     0xc  cstartup_M.o [4]
+  Initializer bytes  const     0x800'0a9c     0x8  <for P2-1>
+  .text              ro code   0x800'0aa4     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0aa8     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0aac     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0ab0     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0ab4     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0ab8     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0abc     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0ac0     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0ac4     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0ac8     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0acc     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0ad0     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0ad4     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0ad8     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0adc     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0ae0     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0ae4     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0ae8     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0aec     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0af0     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0af4     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0af8     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0afc     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b00     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b04     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b08     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b0c     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b10     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b14     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b18     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b1c     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b20     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b24     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b28     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b2c     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b30     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b34     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b38     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b3c     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b40     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b44     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b48     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b4c     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b50     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b54     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b58     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b5c     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b60     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b64     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b68     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b6c     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b70     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b74     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b78     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b7c     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b80     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b84     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b88     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b8c     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b90     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b94     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b98     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0b9c     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0ba0     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0ba4     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0ba8     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0bac     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0bb0     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0bb4     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0bb8     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0bbc     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0bc0     0x4  startup_stm32f30x.o [1]
+  .text              ro code   0x800'0bc4     0x4  startup_stm32f30x.o [1]
+  .rodata            const     0x800'0bc8     0x0  zero_init3.o [4]
+  .rodata            const     0x800'0bc8     0x0  copy_init3.o [4]
+                             - 0x800'0bc8   0xa40
+
+"P2", part 1 of 3:                            0x8
+  P2-1                        0x2000'0000     0x8  <Init block>
+    .data            inited   0x2000'0000     0x4  main.o [1]
+    .data            inited   0x2000'0004     0x4  main.o [1]
+                            - 0x2000'0008     0x8
+
+"P2", part 2 of 3:                          0x19c
+  .bss               zero     0x2000'0008    0xc8  main.o [1]
+  .bss               zero     0x2000'00d0    0xc8  main.o [1]
+  .bss               zero     0x2000'0198     0x4  main.o [1]
+  .bss               zero     0x2000'019c     0x4  main.o [1]
+  .bss               zero     0x2000'01a0     0x4  main.o [1]
+                            - 0x2000'01a4   0x19c
+
+"P2", part 3 of 3:                         0x2000
+  CSTACK                      0x2000'01a8  0x2000  <Block>
+    CSTACK           uninit   0x2000'01a8  0x2000  <Block tail>
+                            - 0x2000'21a8  0x2000
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+   0x800'0bc8   0x803'ffff  0x3'f438
+  0x2000'01a4  0x2000'01a7       0x4
+  0x2000'21a8  0x2000'9fff    0x7e58
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x19c:
+          0x2000'0008  0x19c
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x8:
+           0x800'0a9c    0x8
+    1 destination range, total size 0x8:
+          0x2000'0000    0x8
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module               ro code  ro data  rw data
+    ------               -------  -------  -------
+command line/config:
+    ----------------------------------------------
+    Total:
+
+C:\Users\hp\Dropbox\Laboratorio di Misure\WorkspaceLMM\Esami\Rampa\Debug\Obj: [1]
+    main.o                   620        8      420
+    startup_stm32f30x.o      700
+    system_stm32f30x.o       280
+    ----------------------------------------------
+    Total:                 1'600        8      420
+
+dl7M_tlf.a: [2]
+    exit.o                     4
+    low_level_init.o           4
+    ----------------------------------------------
+    Total:                     8
+
+m7M_tl.a: [3]
+    DblMul.o                 418
+    DblToS32.o                58
+    FltAdd.o                 226
+    FltMul.o                 216
+    FltSub.o                 116
+    FltToDbl.o                72
+    S32ToFlt.o                36
+    ----------------------------------------------
+    Total:                 1'142
+
+rt7M_tl.a: [4]
+    cexit.o                   10
+    cmain.o                   30
+    copy_init3.o              46
+    cstartup_M.o              12
+    data_init.o               40
+    zero_init3.o              58
+    ----------------------------------------------
+    Total:                   196
+
+shb_l.a: [5]
+    exit.o                    20
+    ----------------------------------------------
+    Total:                    20
+
+    Gaps                       6
+    Linker created                     36    8'192
+--------------------------------------------------
+    Grand Total:           2'972       44    8'612
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'0a14          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'0a38          --   Gb  - Linker created -
+?main                    0x800'0a39         Code  Gb  cmain.o [4]
+ADC1_2_IRQHandler        0x800'032b   0x16  Code  Gb  main.o [1]
+CSTACK$$Base            0x2000'01a8          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'21a8          --   Gb  - Linker created -
+LUT                     0x2000'0008   0xc8  Data  Gb  main.o [1]
+LUT2                    0x2000'00d0   0xc8  Data  Gb  main.o [1]
+Region$$Table$$Base      0x800'0a14          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'0a38          --   Gb  - Linker created -
+SetSysClock              0x800'092b   0x9a  Code  Lc  system_stm32f30x.o [1]
+SystemInit               0x800'08d5   0x56  Code  Gb  system_stm32f30x.o [1]
+TIM7_IRQHandler          0x800'0341   0x3a  Code  Gb  main.o [1]
+Vram                    0x2000'0198    0x4  Data  Gb  main.o [1]
+__aeabi_d2iz             0x800'0825         Code  Gb  DblToS32.o [3]
+__aeabi_dmul             0x800'0655         Code  Gb  DblMul.o [3]
+__aeabi_f2d              0x800'060d         Code  Gb  FltToDbl.o [3]
+__aeabi_fadd             0x800'04f1         Code  Gb  FltAdd.o [3]
+__aeabi_fmul             0x800'0419         Code  Gb  FltMul.o [3]
+__aeabi_i2f              0x800'03f5         Code  Gb  S32ToFlt.o [3]
+__cmain                  0x800'0a39         Code  Gb  cmain.o [4]
+__exit                   0x800'0a6d   0x14  Code  Gb  exit.o [5]
+__iar_copy_init3         0x800'07f7   0x2e  Code  Gb  copy_init3.o [4]
+__iar_data_init3         0x800'09ed   0x28  Code  Gb  data_init.o [4]
+__iar_fadd               0x800'0861         Code  Gb  FltSub.o [3]
+__iar_fsub               0x800'04fd         Code  Gb  FltAdd.o [3]
+__iar_fsubStart          0x800'050d         Code  Gb  FltAdd.o [3]
+__iar_program_start      0x800'0a91         Code  Gb  cstartup_M.o [4]
+__iar_zero_init3         0x800'05d3   0x3a  Code  Gb  zero_init3.o [4]
+__low_level_init         0x800'0a57    0x4  Code  Gb  low_level_init.o [2]
+__vector_table           0x800'0000         Data  Gb  startup_stm32f30x.o [1]
+_call_main               0x800'0a45         Code  Gb  cmain.o [4]
+_exit                    0x800'0a61         Code  Gb  cexit.o [4]
+_main                    0x800'0a53         Code  Gb  cmain.o [4]
+ampiezza                0x2000'0004    0x4  Data  Gb  main.o [1]
+cont                    0x2000'019c    0x4  Data  Gb  main.o [1]
+cont2                   0x2000'01a0    0x4  Data  Gb  main.o [1]
+exit                     0x800'0a5b    0x4  Code  Gb  exit.o [2]
+main                     0x800'0189  0x1a2  Code  Gb  main.o [1]
+offset                  0x2000'0000    0x4  Data  Gb  main.o [1]
+
+
+[1] = C:\Users\hp\Dropbox\Laboratorio di Misure\WorkspaceLMM\Esami\Rampa\Debug\Obj
+[2] = dl7M_tlf.a
+[3] = m7M_tl.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+  2'972 bytes of readonly  code memory
+     44 bytes of readonly  data memory
+  8'612 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
